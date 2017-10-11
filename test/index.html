@@ -37,7 +37,7 @@
             username = prompt("Please Enter a Name", "cms")
         })
         $(function () {
-            var conn = $.hubConnection();
+            var conn = $.hubConnection("http://pusetfinal.somee.com/");
             var hub = conn.createHubProxy("chat");
             conn.start(function () {
                 hub.invoke("getall");
